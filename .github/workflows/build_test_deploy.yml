@@ -1,6 +1,6 @@
 name: build-test-deploy
 on: push
-jobs: 
+jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
@@ -12,7 +12,7 @@ jobs:
           node-version: '18.x'
       - run: npm install --legacy-peer-deps
       - run: npm run build 
-   test: 
+  test: 
     needs: build
     runs-on: ubuntu-latest
     steps: 
