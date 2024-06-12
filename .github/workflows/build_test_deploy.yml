@@ -28,6 +28,7 @@ jobs:
       - run: echo "mock test"
     deploy:
       needs: test
+      runs-on: ubuntu-latest
       permissions:
         contents: write
         pages: write
@@ -35,7 +36,6 @@ jobs:
       environment:
         name: production
         url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
       steps:
       - name: checkout repo
         uses: actions/checkout@v3
