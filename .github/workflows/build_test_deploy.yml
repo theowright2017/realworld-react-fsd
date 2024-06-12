@@ -24,8 +24,8 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install --legacy-peer-deps
-      # - run: npm test
       - run: echo "mock test"
+      # - run: npm test
     deploy:
       needs: test
       runs-on: ubuntu-latest
