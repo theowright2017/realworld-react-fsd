@@ -12,8 +12,6 @@ jobs:
           node-version: '18.x'
       - run: npm install --legacy-peer-deps
       - run: npm run build 
-  
-  # needs - runs concurrently
    test: 
     needs: build
     runs-on: ubuntu-latest
