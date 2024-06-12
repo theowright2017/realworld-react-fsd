@@ -4,9 +4,9 @@ jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     steps:
-      name: Check out repo code
-      uses: actions/checkout@v3
-      run: "$(cat hello_world.txt)"
+      - name: Check out repo code
+        uses: actions/checkout@v3
+      - run: "$(cat hello_world.txt)"
 
 
 # comment
